@@ -1,0 +1,12 @@
+Source: dep1
+Maintainer: w0413777@nscc.ca
+Section: misc
+Priority: optional
+Build-Depends: debhelper-compat (=13)
+Standards-Version: 4.6.2
+
+Package: dep1
+Architecture: all
+Description: ScriptA Dependency 1
+ This package is required to run ScriptA. It has no dependencies of its own.
+Homepage: https://www.github.com/dbh201/ICOM3010_dpkg

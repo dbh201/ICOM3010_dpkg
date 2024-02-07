@@ -1,0 +1,84 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package dep1
+dpkg-buildpackage: info: source version 1.0-1
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by dbell <dbell@trixie>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   dh_auto_clean
+   dh_clean
+ dpkg-source -b .
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building dep1 using existing ./dep1_1.0.orig.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: building dep1 in dep1_1.0-1.debian.tar.xz
+dpkg-source: info: building dep1 in dep1_1.0-1.dsc
+ debian/rules build
+dh build
+   dh_update_autotools_config
+   dh_autoreconf
+   dh_auto_configure
+   dh_auto_build
+	make -j16 "INSTALL=install --strip-program=true"
+make[1]: Entering directory '/home/dbell/NSCC/TERM2/ICOM3010/ICOM3010_dpkg/dep1'
+echo "Just a file, no need to build!"
+Just a file, no need to build!
+make[1]: Leaving directory '/home/dbell/NSCC/TERM2/ICOM3010/ICOM3010_dpkg/dep1'
+   dh_auto_test
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   dh_installdirs
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/dbell/NSCC/TERM2/ICOM3010/ICOM3010_dpkg/dep1'
+/usr/bin/make DESTDIR=$(pwd)/debian/dep1 prefix=/usr install
+make[2]: Entering directory '/home/dbell/NSCC/TERM2/ICOM3010/ICOM3010_dpkg/dep1'
+install dep1.bin /home/dbell/NSCC/TERM2/ICOM3010/ICOM3010_dpkg/dep1/debian/dep1/usr/lib
+make[2]: Leaving directory '/home/dbell/NSCC/TERM2/ICOM3010/ICOM3010_dpkg/dep1'
+make[1]: Leaving directory '/home/dbell/NSCC/TERM2/ICOM3010/ICOM3010_dpkg/dep1'
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'dep1' in '../dep1_1.0-1_all.deb'.
+ dpkg-genbuildinfo -O../dep1_1.0-1_amd64.buildinfo
+ dpkg-genchanges -O../dep1_1.0-1_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload (original source is included)
+Now running lintian dep1_1.0-1_amd64.changes ...
+E: dep1 changes: bogus-mail-host Changed-By dbell@trixie
+E: dep1: bogus-mail-host-in-debian-changelog dbell@trixie (for version 1.0-1) [usr/share/doc/dep1/changelog.Debian.gz:1]
+E: dep1 source: no-phrase Maintainer w0413777@nscc.ca
+E: dep1: no-phrase Maintainer w0413777@nscc.ca
+E: dep1 changes: no-phrase Maintainer w0413777@nscc.ca
+W: dep1: copyright-without-copyright-notice
+W: dep1 source: debhelper-but-no-misc-depends dep1
+W: dep1: executable-not-elf-or-script [usr/lib/dep1.bin]
+W: dep1 source: file-without-copyright-information Makefile [debian/copyright]
+W: dep1 source: file-without-copyright-information debian/changelog [debian/copyright]
+W: dep1 source: file-without-copyright-information debian/control [debian/copyright]
+W: dep1 source: file-without-copyright-information debian/copyright [debian/copyright]
+W: dep1 source: file-without-copyright-information debian/dep1.dirs [debian/copyright]
+W: dep1 source: file-without-copyright-information debian/patches/series [debian/copyright]
+W: dep1 source: file-without-copyright-information debian/patches/testnew [debian/copyright]
+W: dep1 source: file-without-copyright-information debian/rules [debian/copyright]
+W: dep1 source: file-without-copyright-information debian/source/format [debian/copyright]
+W: dep1 source: file-without-copyright-information dep1.bin [debian/copyright]
+W: dep1: initial-upload-closes-no-bugs [usr/share/doc/dep1/changelog.Debian.gz:1]
+W: dep1 source: no-nmu-in-changelog [debian/changelog:1]
+W: dep1 source: source-nmu-has-incorrect-version-number 1.0-1 [debian/changelog:1]
+W: dep1: wrong-bug-number-in-closes #XXXXXX [usr/share/doc/dep1/changelog.Debian.gz:3]
+Finished running lintian.

@@ -1,0 +1,34 @@
+Format: 1.8
+Date: Wed, 07 Feb 2024 16:28:32 -0400
+Source: dep1
+Binary: dep1
+Architecture: source all
+Version: 1.0-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: w0413777@nscc.ca
+Changed-By: dbell <dbell@trixie>
+Description:
+ dep1       - ScriptA Dependency 1
+Changes:
+ dep1 (1.0-1) UNRELEASED; urgency=medium
+ .
+   * Initial release. (Closes: #XXXXXX)
+Checksums-Sha1:
+ dfb3b28f7de5a15b32f7eaf6c2c73322a589935f 709 dep1_1.0-1.dsc
+ 768f73b896a43677c98120b9d8f3307f43934afd 248 dep1_1.0.orig.tar.xz
+ 274ca56ef8b0d27e470aa2c19763a770c0bb91c0 1836 dep1_1.0-1.debian.tar.xz
+ f2e0bcb74a359935023bc347b3a12596ed2c210a 1304 dep1_1.0-1_all.deb
+ d0e2101d783fc61a88f7074a113d430b0b1bd9c7 5357 dep1_1.0-1_amd64.buildinfo
+Checksums-Sha256:
+ c7daa6bb004d3d9fe30f7bf6fe695e14dc19fc7a77994c8c36764ffc5f0c217d 709 dep1_1.0-1.dsc
+ dbc6034ef6290f00ec7e25d45667e2ec38994a8b6fd2279bd0d7319104c2fcd2 248 dep1_1.0.orig.tar.xz
+ 7481144a0eb9d4f58bfafc4560ceac42a00e9b019d05690407d2c588f4a0679a 1836 dep1_1.0-1.debian.tar.xz
+ f261b60041d95990e8b15f3b4d8ac67a845415a2e2f28caf4d59bb580745b00a 1304 dep1_1.0-1_all.deb
+ 4a1cad5002e73b779ba4b5a8607dcab26db63cba3669d77ff2117cb5bc56f51e 5357 dep1_1.0-1_amd64.buildinfo
+Files:
+ 1eff146a63db9a863ac1c5b130422005 709 misc optional dep1_1.0-1.dsc
+ 9e73c65fb45be926e43f49e32f9c8ccd 248 misc optional dep1_1.0.orig.tar.xz
+ 22c88f44bba424cc6ba4c8ecc8769668 1836 misc optional dep1_1.0-1.debian.tar.xz
+ d37ea050b2682caf55193b3d65d6d596 1304 misc optional dep1_1.0-1_all.deb
+ c73de3817331ebfdce36d62443fb6ede 5357 misc optional dep1_1.0-1_amd64.buildinfo

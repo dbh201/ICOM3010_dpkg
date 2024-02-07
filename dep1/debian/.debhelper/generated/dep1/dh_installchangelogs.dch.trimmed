@@ -1,0 +1,5 @@
+dep1 (1.0-1) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- dbell <dbell@trixie>  Wed, 07 Feb 2024 16:28:32 -0400

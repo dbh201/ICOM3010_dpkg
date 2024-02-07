@@ -1,0 +1,10 @@
+Package: dep1
+Version: 1.0-1
+Architecture: all
+Maintainer: w0413777@nscc.ca
+Installed-Size: 10
+Section: misc
+Priority: optional
+Homepage: https://www.github.com/dbh201/ICOM3010_dpkg
+Description: ScriptA Dependency 1
+ This package is required to run ScriptA. It has no dependencies of its own.
